@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>The Weather App</title>
+</head>
+<body class="bg-dark">
+    <nav class="navbar navbar-light bg-white mb-2 d-flex pe-3">
+        <a class="navbar-brand" href="#">
+            <img src="logo.png" width="40" height="40" alt="">
+        </a>
+        <div class="searchBar-container">
+            <form action="search" id="searchBar">
+                <input type="text" class="border-0 px-lg-2" id="searchCity" placeholder="Enter a city">
+                <button id="searchIcon" type="submit" class="m-0 p-0 rounded-5">
+                   <i class="fa-solid fa-magnifying-glass-location fa-lg" style="color: rgb(99, 140, 241);"></i>
+                </button>
+                
+                
+            </form>
+        </div>
+    </nav>
+    <div class="overlay text-danger border-1 border-danger  d-flex" id="overlay">
+        <p class="mb-0">City not found, please try again!</p>
+        <button onclick="clearWarning()" class="border-0 bg-transparent text-danger ">x</button>
+    </div>
+    <div class="container weather-card p-3 mt-3">
+        <div class="city-name-container d-flex align-items-center flex-row gap-3 justify-content-lg-start justify-content-center m-2">
+            <p class=" text-black mb-0 " >
+                <span><i class="fa-solid fa-location-dot " style="color: rgb(0, 139, 248);"></i></span>
+                <span class="location" id="location"></span>
+            </p>
+            <span id="lat&long" class="bg-dark-subtle rounded-1 p-1 lat-long">16.8053°N/96.1561°E</span>
+        </div>
+        <sub-title class="d-flex align-items-center gap-2  px-2 justify-content-lg-start justify-content-center">
+            <span class="bg-primary rounded-3 country mb-0" id="country">MM</span>
+            <p class="description text-muted mb-0" id="description">Light Rain</p>
+        </sub-title>
+        <div class="Main-content d-flex flex-column align-items-lg-start align-items-center">
+            <div class="degree d-flex align-items-center gap-2 px-lg-3">
+                <h1 class="degree-celsius display-1 m-0" id="degreeCelsius">
+                    0°C
+                </h1>
+                <h5 id="degreeFahrenheit" class="display-6 m-0"></h5>
+            </div>
+            <div class="sub-content d-grid ">
+                <div class="sub-description">
+                 <div id="subDesContainer" class="d-flex align-items-center justify-content-center justify-content-lg-start gap-2 px-lg-3 ">
+                    <div id="weatherIconContainer">
+
+                    </div>
+                    <p class="text-primary mb-0" id="subDes"></p>
+                 </div>
+                 <p id="subText" class="text-muted text-center text-lg-start px-lg-3" ></p>
+                </div>
+                <div class="atmo-container m-0">
+                   <h4 class="text-dark m-0">Atmospheric Pressure</h4>
+                   <p id="pressure">1018.3hPa</p>
+                    <div class="progress ">
+                        <div class="progress-bar" role="progressbar" id="progressBar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                 
+                </div>
+            </div>
+            <div class="chart d-grid">
+                <div class="humidity-container">
+                    <p class="mb-0">Relative Humidity</p>
+                    <p id="humidity" class="humidity mb-0 text-primary">62%</p>
+                    <span class="chart-text text-muted" id="humidityDes">Slightly Saturated</span>
+                </div>
+                <div class="wind-container">
+                    <p class="mb-0">Wind Velocity</p>
+                    <p class="wind mb-0 text-primary" id="wind">14mph</p>
+                    <span class="chart-text text-muted" id="gust">Gusts 22 mph</span>
+                </div>
+                <div class="visbility-container">
+                    <p class="mb-0">Visibility</p>
+                    <p class="visbility text-primary mb-0" id="visibility">100%</p>
+                    <span class="chart-text  text-muted " id="visDes">Unobstructed Horizon</span>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>

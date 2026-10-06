@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.display-container{
+   padding: 10px;
+
+
+}
+
+.navbar{
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+
+.navbar-brand{
+    padding: 10px 20px;
+}
+
+.searchBar-container{
+    color: black;
+
+}
+#searchBar{
+    width: fit-content;
+    border:1px solid rgb(92, 92, 255);
+    padding: 8px 20px ;
+    border-radius: 30px;
+    background-color: white;
+
+
+}
+
+#searchBar #searchCity{
+    outline: none;
+    color: rgb(59, 59, 255);
+}
+
+#searchCity::placeholder{
+    color: rgb(138, 138, 255);
+}
+
+#searchBar button{
+    border:none;
+    background: transparent;
+    outline: none;
+    
+}   
+
+.overlay{
+    border: 1px solid rgb(245, 32, 32) !important;
+    border-radius: 5px;
+    padding: 4px 10px;
+    overflow: hidden;
+    margin: 3px;
+    justify-content: space-between;
+    visibility: hidden;
+}
+.overlay button{
+    font-size: 18px;
+}
+
+.weather-card{
+    background-color: white;
+    border-radius: 10px;
+}
+
+.location{
+     font-family: "Instrument Serif", serif;
+     font-weight: 500;
+     font-size: 20px;
+      font-style: italic;
+
+}
+
+.lat-long{
+    font-size: 12px;
+    color: rgb(46, 46, 46);
+}
+
+.country{
+    font-size: 12px;
+    padding: 2px 6px;
+    color: rgb(246, 239, 229);
+}
+
+.description{
+    font-size: 14px;
+    
+}
+
+.degree{
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+}
+
+
+.degree-celsius{
+      font-family: "Bebas Neue", sans-serif;
+}
+
+#degreeFahrenheit{
+    color: rgb(146, 146, 146);
+}
+
+.sub-content{
+    grid-template-columns: 70% 30%;
+}
+
+@media (max-width:1000px) {
+    .sub-content{
+        grid-template-columns: 1fr;
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .progress{
+        width: 15rem;
+        
+
+    }
+    .searchBar-container{
+        display: flex;
+        
+    }
+    #searchBar{
+        display: flex;
+    }
+    
+
+}
+
+.progress{
+    height: 8px !important;
+}
+
+#subDesContainer{
+    font-size: 24px;
+    font-family: "Bebas Neue", sans-serif;
+   
+}
+
+.atmo-container{
+     background-color: #f7f7f7;
+     border: 1px solid rgb(57, 57, 255);
+     padding:  20px;
+     border-radius: 15px;
+}
+
+.atmo-container h4{
+    font-size: 16px;
+     font-family: "Instrument Serif", serif;
+
+}
+
+.atmo-container p{
+    font-size: 13px;
+    font-weight: 600;
+    
+
+}
+
+.chart{
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    background-color: #f5f3f4 ;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    border-bottom: 5px solid rgb(59, 59, 255);
+
+}
+
+.humidity-container, .visbility-container, .wind-container{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 200;
+
+}
+
+.humidity-container p, .visbility-container p, .wind-container p{
+    color: #888888;
+}
+
+.chart-text{
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
